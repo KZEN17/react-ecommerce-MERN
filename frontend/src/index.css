@@ -248,6 +248,9 @@ img.large {
 	font-weight: bold;
 }
 .checkout-steps > div.active {
-	border-top-color: #f08000;
-	color: #f08000;
+	border-top-color: #000000;
+	color: #000000;
+}
+.fa.fa-paypal {
+	color: #00bfff;
 }

@@ -9,6 +9,8 @@ import SigninScreen from './screens/SigninScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import PaymentScreen from './screens/PaymentScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import ContactUs from './screens/Contact';
 function App() {
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
@@ -28,6 +30,7 @@ function App() {
 						</Link>
 					</div>
 					<div>
+						<Link to="/contact">Contact</Link>
 						<Link to="/cart">
 							My Cart
 							{cartItems.length > 0 && (
@@ -59,9 +62,13 @@ function App() {
 					<Route path="/register" component={RegisterScreen}></Route>
 					<Route path="/shipping" component={ShippingAddressScreen}></Route>
 					<Route path="/payment" component={PaymentScreen}></Route>
+					<Route path="/placeorder" component={PlaceOrderScreen}></Route>
+					<Route path="/contact" component={ContactUs}></Route>
 					<Route path="/" component={HomeScreen} exact></Route>
 				</main>
-				<footer className="row center">All rights reserved</footer>
+				<footer className="row center">
+					<div>All rights reserved&reg; KZENStudios&trade; </div>
+				</footer>
 			</div>
 		</BrowserRouter>
 	);
