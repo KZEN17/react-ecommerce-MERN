@@ -4,7 +4,7 @@ import {
 	productDetailsReducer,
 	productListReducer,
 } from './reducers/productReducers';
-import { cartReducer } from './reducers/cartReucers';
+import { cartReducer } from './reducers/cartReducers';
 import { userRegisterReducer, userSigninReducer } from './reducers/userReducer';
 const initialState = {
 	userSignin: {
@@ -16,6 +16,10 @@ const initialState = {
 		cartItems: localStorage.getItem('cartItems')
 			? JSON.parse(localStorage.getItem('cartItems'))
 			: [],
+		shippingAddress: localStorage.getItem('shippingAddress')
+			? JSON.parse(localStorage.getItem('shippingAddress'))
+			: {},
+		paymentMethod: 'PayPal',
 	},
 };
 const reducer = combineReducers({

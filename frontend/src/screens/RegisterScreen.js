@@ -64,7 +64,7 @@ export default function RegisterScreen(props) {
 					<input
 						type="password"
 						id="password"
-						placeholder="Confirm password"
+						placeholder="Enter password"
 						requred
 						onChange={(e) => setConfirmPassword(e.target.value)}
 					></input>

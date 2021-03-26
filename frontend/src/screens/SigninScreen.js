@@ -39,7 +39,7 @@ export default function SigninScreen(props) {
 						type="email"
 						id="email"
 						placeholder="Enter email"
-						requred
+						required
 						onChange={(e) => setEmail(e.target.value)}
 					></input>
 				</div>

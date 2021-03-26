@@ -28,7 +28,7 @@ body {
 
 header {
 	grid-area: header;
-	background-color: #203040;
+	background-color: #000000;
 }
 main {
 	grid-area: main;
@@ -37,7 +37,7 @@ main {
 
 footer {
 	grid-area: footer;
-	background-color: #203040;
+	background-color: #000000;
 	color: #ffffff;
 }
 /* Common */
@@ -51,6 +51,7 @@ h2 {
 }
 a {
 	text-decoration: none;
+	color: #000;
 }
 a:hover {
 	color: #ff8000;
@@ -82,7 +83,8 @@ button {
 	cursor: pointer;
 }
 button.primary {
-	background-color: #f0c040;
+	background-color: #000000;
+	color: #ffffff;
 }
 button.block {
 	width: 100%;
@@ -147,7 +149,7 @@ img.medium {
 	width: 100%;
 }
 img.large {
-	/* max-width: 29rem; */
+	max-width: 70rem;
 	width: 100%;
 }
 
@@ -155,6 +157,7 @@ img.large {
 .card {
 	border: 0.1rem #c0c0c0;
 	background-color: #f8f8f8;
+	color: #000000;
 	border-radius: 0.5rem;
 	margin: 1rem;
 }
@@ -170,7 +173,7 @@ img.large {
 /* Rating */
 
 .rating span {
-	color: #f0c040;
+	color: #000;
 	margin: 0.1rem;
 }
 .rating span:last-child {
@@ -213,7 +216,7 @@ img.large {
 }
 .form label {
 	margin: 1rem 0;
-	display: block;
+	/* display: block; */
 }
 /* Dropdown */
 .dropdown {
@@ -234,4 +237,17 @@ img.large {
 }
 .dropdown:hover .dropdown-content {
 	display: block;
+}
+/* Checkout steps */
+
+.checkout-steps > div {
+	border-top: 0.3rem #c0c0c0 solid;
+	color: #c0c0c0;
+	flex: 1;
+	padding: 1rem;
+	font-weight: bold;
+}
+.checkout-steps > div.active {
+	border-top-color: #f08000;
+	color: #f08000;
 }

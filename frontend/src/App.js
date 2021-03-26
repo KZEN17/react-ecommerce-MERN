@@ -7,6 +7,8 @@ import { signout } from './actions/userActions';
 import ProductScreen from './screens/ProductScreen';
 import SigninScreen from './screens/SigninScreen';
 import RegisterScreen from './screens/RegisterScreen';
+import ShippingAddressScreen from './screens/ShippingAddressScreen';
+import PaymentScreen from './screens/PaymentScreen';
 function App() {
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
@@ -22,7 +24,7 @@ function App() {
 				<header className="row">
 					<div>
 						<Link className="brand" to="/">
-							KZEN Tech Store
+							<i className="fa fa-plug"></i> gadgetnetic
 						</Link>
 					</div>
 					<div>
@@ -55,6 +57,8 @@ function App() {
 					<Route path="/product/:id" component={ProductScreen}></Route>
 					<Route path="/signin" component={SigninScreen}></Route>
 					<Route path="/register" component={RegisterScreen}></Route>
+					<Route path="/shipping" component={ShippingAddressScreen}></Route>
+					<Route path="/payment" component={PaymentScreen}></Route>
 					<Route path="/" component={HomeScreen} exact></Route>
 				</main>
 				<footer className="row center">All rights reserved</footer>
