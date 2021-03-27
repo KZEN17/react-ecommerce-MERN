@@ -4,10 +4,10 @@ const orderSchema = new mongoose.Schema(
 	{
 		orderItems: [
 			{
-				name: { type: String, requred: true },
-				image: { type: String, requred: true },
-				qty: { type: Number, requred: true },
-				price: { type: Number, requred: true },
+				name: { type: String, required: true },
+				qty: { type: Number, required: true },
+				image: { type: String, required: true },
+				price: { type: Number, required: true },
 				product: {
 					type: mongoose.Schema.Types.ObjectId,
 					ref: 'Product',
@@ -37,6 +37,5 @@ const orderSchema = new mongoose.Schema(
 		timestamps: true,
 	}
 );
-
 const Order = mongoose.model('Order', orderSchema);
 export default Order;
