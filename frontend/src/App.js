@@ -11,6 +11,7 @@ import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ContactUs from './screens/Contact';
+import OrderScreen from './screens/OrderScreen';
 function App() {
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
@@ -30,7 +31,7 @@ function App() {
 						</Link>
 					</div>
 					<div>
-						<Link to="/contact">Contact</Link>
+						{/* <Link to="/contact">Contact</Link> */}
 						<Link to="/cart">
 							My Cart
 							{cartItems.length > 0 && (
@@ -63,6 +64,7 @@ function App() {
 					<Route path="/shipping" component={ShippingAddressScreen}></Route>
 					<Route path="/payment" component={PaymentScreen}></Route>
 					<Route path="/placeorder" component={PlaceOrderScreen}></Route>
+					<Route path="/order/:id" component={OrderScreen}></Route>
 					<Route path="/contact" component={ContactUs}></Route>
 					<Route path="/" component={HomeScreen} exact></Route>
 				</main>
