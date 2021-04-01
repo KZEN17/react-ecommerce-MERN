@@ -203,6 +203,11 @@ img.large {
 	background-color: #ffe0e0e0;
 	border-radius: 0.5rem;
 }
+.alert-success {
+	color: #20a020;
+	background-color: #eeffe0;
+	border-radius: 0.5rem;
+}
 /* Form */
 
 .form {
